@@ -18,11 +18,12 @@ pipeline {
             steps {
                 script {
                     sh 'npm install'
+                     sh 'npm install mocha'
+                      sh 'npm install chai'
                 }
             }
         }
         // Uncomment these stages if you want to include tests and deployment steps
-        /*
         stage('Run Tests') {
             steps {
                 script {
@@ -30,6 +31,7 @@ pipeline {
                 }
             }
         }
+        /*
 
         stage('Deploy to Render') {
             steps {
